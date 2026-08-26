@@ -11,7 +11,7 @@
     <!-- Tarjeta inclinada de fondo -->
     <rect x="15" y="5" width="60" height="85" rx="6" fill="#FFDE00" transform="rotate(-10 45 47)"/>
     <!-- Tarjeta principal -->
-    <rect x="10" y="10" width="60" height="85" rx="6" fill="url(#blueCard)" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="20" y="20" width="60" height="85" rx="6" fill="url(#blueCard)" stroke="#FFFFFF" stroke-width="3"/>
     <!-- CP dentro de la tarjeta -->
     <text x="40" y="62" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#FFDE00" text-anchor="middle" stroke="#000" stroke-width="1">CP</text>
   </g>
