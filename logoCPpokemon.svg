@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%" height="280">
   <defs>
-    <!-- Degradados de alta calidad -->
-    <linearGradient id="pokeRedLarge" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FF2A2A" />
+    <!-- Degradados y sombras de alta calidad -->
+    <linearGradient id="pokeRedMega" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF1F1F" />
       <stop offset="100%" stop-color="#990000" />
     </linearGradient>
-    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFCC00" />
-      <stop offset="100%" stop-color="#FF9900" />
+    <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFA500" />
     </linearGradient>
     
-    <!-- Sombra suave para dar volumen al icono -->
-    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-      <feOffset dx="2" dy="4" result="offsetblur" />
+    <!-- Sombra para el icono -->
+    <filter id="megaDropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+      <feOffset dx="3" dy="5" result="offsetblur" />
       <feComponentTransfer>
-        <feFuncA type="linear" slope="0.3"/>
+        <feFuncA type="linear" slope="0.35"/>
       </feComponentTransfer>
       <feMerge> 
         <feMergeNode />
@@ -24,45 +24,34 @@
     </filter>
   </defs>
 
-  <!-- ICONO: POKÉBOLA CP GRANDE -->
-  <g transform="translate(20, 10)" filter="url(#dropShadow)">
-    <!-- Borde Exterior -->
-    <circle cx="100" cy="100" r="95" fill="#111111" />
-    
-    <!-- Mitad Superior (Roja) -->
-    <path d="M 10,100 A 90,90 0 0,1 190,100 Z" fill="url(#pokeRedLarge)" />
-    
-    <!-- Mitad Inferior (Blanca con sombras ligeras) -->
-    <path d="M 10,100 A 90,90 0 0,0 190,100 Z" fill="#F4F4F4" />
-    
-    <!-- Línea Central Negra -->
-    <rect x="10" y="92" width="180" height="16" fill="#111111" />
-    
-    <!-- Círculo Central Integrado -->
-    <circle cx="100" cy="100" r="42" fill="#111111" />
-    <circle cx="100" cy="100" r="32" fill="#FFFFFF" stroke="#111111" stroke-width="3"/>
-    
-    <!-- MONOGRAMA "CP" DENTRO DEL CÍRCULO -->
-    <text x="100" y="113" font-family="'Arial Black', Gadget, sans-serif" font-size="40" font-weight="900" fill="#111111" text-anchor="middle" letter-spacing="-2">CP</text>
+  <!-- ICONO: POKÉBOLA CP MEGA GRANDE (Mantenemos tamaño proporcional) -->
+  <g transform="translate(30, 20)" filter="url(#megaDropShadow)">
+    <circle cx="110" cy="110" r="105" fill="#111111" />
+    <path d="M 10,110 A 100,100 0 0,1 210,110 Z" fill="url(#pokeRedMega)" />
+    <path d="M 10,110 A 100,100 0 0,0 210,110 Z" fill="#F0F0F0" />
+    <rect x="10" y="101" width="200" height="18" fill="#111111" />
+    <circle cx="110" cy="110" r="48" fill="#111111" />
+    <circle cx="110" cy="110" r="38" fill="#FFFFFF" stroke="#111111" stroke-width="4"/>
+    <text x="110" y="125" font-family="'Arial Black', Gadget, sans-serif" font-size="48" font-weight="900" fill="#111111" text-anchor="middle" letter-spacing="-2">CP</text>
   </g>
 
-  <!-- TEXTOS PRINCIPALES (TAMAÑO MAXI) -->
-  <g transform="translate(240, 40)">
-    <!-- SIGLAS "CP" GIGANTES -->
-    <text x="0" y="70" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="80" font-weight="900" fill="#111111" letter-spacing="-3">CP</text>
+  <!-- BLOQUE DE TEXTO (MAXI TAMAÑO + CONTORNO NEGRO CAFÉ) -->
+  <g transform="translate(280, 50)">
+    <!-- SIGLAS "CP" GIGANTES CON CONTORNO NEGRO CAFÉ -->
+    <text x="0" y="100" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="120" font-weight="900" fill="#111111" stroke="#3E2723" stroke-width="6" letter-spacing="-4">CP</text>
     
-    <!-- BLOQUE TEXTO: CARD & POKÉMON -->
-    <text x="135" y="48" font-family="'Arial Black', sans-serif" font-size="34" font-weight="900" fill="#2A3A93">
-      CARD <tspan fill="#FF2A2A">&amp;</tspan> POKÉMON
+    <!-- BLOQUE TEXTO: CARD & POKÉMON GIGANTE CON CONTORNO -->
+    <text x="195" y="65" font-family="'Arial Black', sans-serif" font-size="52" font-weight="900" fill="#2A3A93" stroke="#3E2723" stroke-width="3">
+      CARD <tspan fill="#FF1F1F" stroke="#3E2723" stroke-width="3">&amp;</tspan> POKÉMON
     </text>
     
-    <!-- SUBTEXTO: COLLECTIBLES -->
-    <text x="137" y="80" font-family="'Arial', sans-serif" font-size="22" font-weight="800" fill="#555555" letter-spacing="6">
+    <!-- SUBTEXTO: COLLECTIBLES GIGANTE CON CONTORNO -->
+    <text x="198" y="115" font-family="'Arial', sans-serif" font-size="36" font-weight="800" fill="#555555" stroke="#3E2723" stroke-width="2" letter-spacing="8">
       COLLECTIBLES
     </text>
     
-    <!-- BARRAS DECORATIVAS Y DETALLES -->
-    <rect x="0" y="105" width="510" height="6" rx="3" fill="url(#goldAccent)" />
-    <rect x="0" y="118" width="340" height="3" rx="1.5" fill="#111111" opacity="0.8" />
+    <!-- BARRAS DECORATIVAS Y DETALLES (Ajustadas a tamaño maxi) -->
+    <rect x="0" y="160" width="670" height="8" rx="4" fill="url(#goldHighlight)" />
+    <rect x="0" y="178" width="450" height="4" rx="2" fill="#111111" opacity="0.9" />
   </g>
 </svg>
