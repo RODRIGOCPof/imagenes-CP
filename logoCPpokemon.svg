@@ -1,31 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="220">
   <defs>
-    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2B73B9" />
-      <stop offset="100%" stop-color="#1B4B7A" />
+    <!-- Degradados de alta calidad -->
+    <linearGradient id="pokeRedLarge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A2A" />
+      <stop offset="100%" stop-color="#990000" />
     </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFCC00" />
+      <stop offset="100%" stop-color="#FF9900" />
+    </linearGradient>
+    
+    <!-- Sombra suave para dar volumen al icono -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="4" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
 
-  <!-- ICONO: Tarjeta estilizada con "CP" -->
-  <g transform="translate(15, 10)">
-    <!-- Tarjeta inclinada de fondo -->
-    <rect x="15" y="5" width="60" height="85" rx="6" fill="#FFDE00" transform="rotate(-10 45 47)"/>
-    <!-- Tarjeta principal -->
-    <rect x="20" y="20" width="60" height="85" rx="6" fill="url(#blueCard)" stroke="#FFFFFF" stroke-width="3"/>
-    <!-- CP dentro de la tarjeta -->
-    <text x="40" y="62" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" fill="#FFDE00" text-anchor="middle" stroke="#000" stroke-width="1">CP</text>
+  <!-- ICONO: POKÉBOLA CP GRANDE -->
+  <g transform="translate(20, 10)" filter="url(#dropShadow)">
+    <!-- Borde Exterior -->
+    <circle cx="100" cy="100" r="95" fill="#111111" />
+    
+    <!-- Mitad Superior (Roja) -->
+    <path d="M 10,100 A 90,90 0 0,1 190,100 Z" fill="url(#pokeRedLarge)" />
+    
+    <!-- Mitad Inferior (Blanca con sombras ligeras) -->
+    <path d="M 10,100 A 90,90 0 0,0 190,100 Z" fill="#F4F4F4" />
+    
+    <!-- Línea Central Negra -->
+    <rect x="10" y="92" width="180" height="16" fill="#111111" />
+    
+    <!-- Círculo Central Integrado -->
+    <circle cx="100" cy="100" r="42" fill="#111111" />
+    <circle cx="100" cy="100" r="32" fill="#FFFFFF" stroke="#111111" stroke-width="3"/>
+    
+    <!-- MONOGRAMA "CP" DENTRO DEL CÍRCULO -->
+    <text x="100" y="113" font-family="'Arial Black', Gadget, sans-serif" font-size="40" font-weight="900" fill="#111111" text-anchor="middle" letter-spacing="-2">CP</text>
   </g>
 
-  <!-- TEXTO -->
-  <text x="110" y="65" font-family="'Arial Black', Impact, sans-serif" font-size="42" font-weight="900" fill="#FFC700" stroke="#3B4CCA" stroke-width="2" letter-spacing="1">
-    CP
-  </text>
-  
-  <text x="180" y="58" font-family="'Arial Black', sans-serif" font-size="20" font-weight="900" fill="#2A2A2A">
-    CARD <tspan fill="#FF1122">&amp;</tspan> POKÉMON
-  </text>
-  
-  <text x="181" y="78" font-family="'Arial', sans-serif" font-size="11" font-weight="bold" fill="#666666" letter-spacing="4">
-    STORE &amp; TCG COLLECTION
-  </text>
+  <!-- TEXTOS PRINCIPALES (TAMAÑO MAXI) -->
+  <g transform="translate(240, 40)">
+    <!-- SIGLAS "CP" GIGANTES -->
+    <text x="0" y="70" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="80" font-weight="900" fill="#111111" letter-spacing="-3">CP</text>
+    
+    <!-- BLOQUE TEXTO: CARD & POKÉMON -->
+    <text x="135" y="48" font-family="'Arial Black', sans-serif" font-size="34" font-weight="900" fill="#2A3A93">
+      CARD <tspan fill="#FF2A2A">&amp;</tspan> POKÉMON
+    </text>
+    
+    <!-- SUBTEXTO: COLLECTIBLES -->
+    <text x="137" y="80" font-family="'Arial', sans-serif" font-size="22" font-weight="800" fill="#555555" letter-spacing="6">
+      COLLECTIBLES
+    </text>
+    
+    <!-- BARRAS DECORATIVAS Y DETALLES -->
+    <rect x="0" y="105" width="510" height="6" rx="3" fill="url(#goldAccent)" />
+    <rect x="0" y="118" width="340" height="3" rx="1.5" fill="#111111" opacity="0.8" />
+  </g>
 </svg>
